@@ -34,6 +34,7 @@ module.exports = () => {
         description: 'just another text editor',
         background_color: '#ffffff',
         theme_color: '#000000',
+        inject: true,
         start_url: '/',
         publicPath: '/',
         icons: [
