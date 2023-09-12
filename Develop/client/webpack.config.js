@@ -21,27 +21,27 @@ module.exports = () => {
         title: 'jate'
       }),
      
-      // Injects our custom service worker
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
-      }),
       new WebpackPwaManifest({
         name: 'jate',
         short_name: 'jate',
         description: 'just another text editor',
-        background_color: '#ffffff',
-        theme_color: '#000000',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         inject: true,
         start_url: '/',
         publicPath: '/',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'), 
-            sizes: [96, 128, 192, 256, 384, 512], 
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
         ],
+      }),
+      // Injects our custom service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }),
     ],
 
