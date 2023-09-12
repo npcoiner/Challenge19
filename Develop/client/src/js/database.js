@@ -13,6 +13,7 @@ const initdb = async () =>
   });
 
 export const putDb = async (content) => {
+  console.log("putting");
   const db = await openDB('jate', 1);
   const tx = db.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
@@ -26,6 +27,7 @@ export const putDb = async (content) => {
 }
 
 export const getDb = async () => {
+  console.log("getting");
   const db = await openDB('jate', 1); 
   const tx = db.transaction('jate', 'readonly');
   const store = tx.objectStore('jate');
